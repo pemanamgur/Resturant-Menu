@@ -1,0 +1,560 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background: #dedede;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header {
+  position: relative;
+  width: 70%;
+  height: 90%;
+  background: #fff;
+  box-shadow: 0px 0px 50px -1px rgb(0, 0, 0, 0.5);
+  padding: 0px 30px;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  transition: 1s linear;
+}
+
+header .logo {
+  position: absolute;
+  top: 0;
+  left: 10%;
+  width: 250px;
+  height: 320px;
+  background: #163020;
+  transition: 1s linear;
+}
+
+header .logo h1 {
+  color: #fff;
+  text-align: center;
+  margin-top: 5px;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+header .logo img {
+  width: 280px;
+  margin: 40px 0px 0px -18px;
+  filter: drop-shadow(0px 0px 20px rgb(0, 0, 0, 6));
+}
+
+header nav {
+  width: 100%;
+  height: 10%;
+  /*border: 1px solid black;*/
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header nav .menu {
+  font-size: 30px;
+  color: #000;
+}
+
+header nav .right_menu {
+  display: flex;
+  align-items: center;
+}
+
+header nav .right_menu ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+
+header nav .right_menu ul li {
+  padding: 3px 10px;
+}
+
+header nav .right_menu ul li a {
+  position: relative;
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: 600;
+  color: #000;
+  transition: 0.3s linear;
+}
+
+header nav .right_menu ul li a::before {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: #bc1313;
+  border-radius: 50%;
+  bottom: -5px;
+  left: 45%;
+  opacity: 0;
+  transition: 0.3s linear;
+}
+
+header nav .right_menu ul li a:hover {
+  color: #bc1313;
+}
+
+header nav .right_menu ul li a:hover::before {
+  opacity: 1;
+}
+
+header nav .right_menu .user_cart {
+  margin-left: 50px;
+  display: flex;
+  align-items: center;
+}
+
+header nav .right_menu .user_cart i {
+  position: relative;
+  margin-left: 10px;
+}
+
+header .left_menu {
+  width: 20px;
+  height: 90%;
+  /*border: 1px solid red;*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+header .left_menu a {
+  margin: 30px 0px;
+  padding: 0px 5px;
+  text-decoration: none;
+  font-size: 10px;
+  color: #000;
+  font-weight: 600;
+  transition: 0.3s linear;
+  transform: rotate(-90deg);
+}
+
+header .left_menu a:hover {
+  color: #bc1313;
+}
+
+header section {
+  width: 97%;
+  height: 90%;
+  /* border: 1px solid green;*/
+}
+
+header section .content {
+  position: relative;
+  left: 350px;
+  margin-top: 10%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  transition: 1s linear;
+}
+
+header section .content h1 {
+  font-size: 40px;
+  transition: 1s linear;
+}
+
+header section .content p {
+  font-size: 10px;
+  font-weight: 600;
+  width: 400px;
+  word-break: break-all;
+  text-align: justify;
+}
+
+header section .content .price_order {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+header section .content .price_order .price h2 {
+  font-size: 30px;
+  color: #bc1313;
+  line-height: 28px;
+}
+
+header section .content .price_order .price p {
+  font-size: 6px;
+  width: 50px;
+  text-align: center;
+  /*border: 1px solid black;  */
+}
+
+header section .content .price_order a {
+  padding: 5px 20px;
+  background: #163020;
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  margin-left: 35px;
+  border-radius: 20px;
+  transition: 0.5s ease;
+}
+
+header section .price_order a:hover {
+  background: #4e9525;
+  color: #fff;
+}
+
+header section .cards {
+  width: 100%;
+  height: 145px;
+  /*border: 1px solid black;*/
+  position: relative;
+  top: 20%;
+  padding-left: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: auto;
+  scroll-behavior: smooth;
+  transition: 1s linear;
+}
+
+header section .cards::-webkit-scrollbar {
+  display: none;
+}
+
+header section .cards .card {
+  position: relative;
+  min-width: 125px;
+  min-height: 125px;
+  /*border: 1px solid black;*/
+  margin-right: 13px;
+  background: #163020;
+  transition: 0.5s ease;
+  border-radius: 30px 15px 15px 15px;
+}
+
+header section .cards .card:hover {
+  background: #4e9525;
+}
+
+header section .cards .card:nth-last-child(1) {
+  margin-right: 0px;
+}
+
+header section .cards .card .dis {
+  width: 70px;
+  position: relative;
+  top: -10px;
+  left: -10px;
+}
+
+header section .cards .card h4 {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+header section .cards .card h5 {
+  color: #fff;
+  font-size: 11px;
+  font-family: 500;
+  padding: 0px 10px;
+  margin-top: -8px;
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+header section .cards .card p {
+  color: rgb(203, 203, 203);
+  font-size: 9px;
+  font-weight: 500;
+  padding: 0px 10px;
+}
+
+header section .cards .card .rate_cart {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2px 10px;
+  color: #fff;
+}
+
+header section .cards .card h6 {
+  font-size: 10px;
+}
+
+header section .cards .card .bi {
+  font-size: 12px;
+}
+
+header section .social {
+  position: relative;
+  width: 100%;
+  /*border: 1px solid black;*/
+  top: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: 1s linear;
+}
+
+header section .social .btns {
+  margin-left: 30px;
+}
+
+header section .social .btns .bi {
+  font-size: 13px;
+  cursor: pointer;
+  transition: 0.3s linear;
+}
+
+header section .social .btns .bi:hover {
+  color: rgb(0, 0, 0, 0.5);
+}
+
+header section .social .icons {
+  display: flex;
+  align-items: center;
+}
+
+header section .social .icons a {
+  font-size: 12px;
+  margin-left: 10px;
+  color: #282828;
+  transition: 0.3s linear;
+}
+
+header section .social .icons a:hover {
+  color: #000;
+}
+
+@media screen and (max-width: 1260px) {
+  header {
+    width: 83%;
+  }
+
+  header section .content p {
+    width: 50%;
+  }
+
+  header .logo {
+    width: 230px;
+    height: 240px;
+  }
+
+  header .logo img {
+    width: 235px;
+    margin: 10px 0px 0px -3px;
+  }
+
+  header section .content {
+    margin-top: 3%;
+  }
+
+  header section .cards {
+    top: 18%;
+    width: 100%;
+  }
+
+  header section .social {
+    top: 18%;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 885px) {
+  header {
+    width: 95%;
+  }
+
+  header section .content p {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 775px) {
+  header section .cards {
+    top: 14%;
+    width: 100%;
+  }
+
+  header section .social {
+    top: 15%;
+    width: 100%;
+  }
+
+  header .logo {
+    left: 13%;
+  }
+
+  header section .content {
+    left: 320px;
+  }
+
+  header section {
+    width: 92%;
+  }
+}
+
+@media screen and (max-width: 730px) {
+  header {
+    width: 100%;
+    height: 100%;
+  }
+
+  header nav .right_menu ul li {
+    padding: 3px 8px;
+  }
+
+  header nav .right_menu .user_cart {
+    margin-left: 10px;
+  }
+
+  header .logo {
+    width: 240px;
+    height: 270px;
+  }
+
+  header .logo img {
+    width: 250px;
+    margin: 10px 0px 0px -5px;
+  }
+
+  header section .content {
+    left: 320px;
+  }
+
+  header section .content p {
+    width: 50%;
+  }
+
+  header section .cards {
+    top: 20%;
+    width: 100%;
+  }
+
+  header section .social {
+    top: 20%;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 685px) {
+  header nav .right_menu ul {
+    position: absolute;
+    top: 20%;
+    flex-direction: column;
+    width: 15px;
+    right: 17px;
+  }
+
+  header nav .right_menu ul li {
+    padding: 30px 10px;
+    transform: rotate(90deg);
+  }
+
+  header section .content {
+    left: 10%;
+    top: 35%;
+    width: 160%;
+    justify-content: center;
+  }
+
+  header section .content h1 {
+    font-size: 15px;
+  }
+
+  header .logo {
+    left: 35%;
+    width: 200px;
+    height: 220px;
+  }
+
+  header .logo img {
+    width: 200px;
+    margin: 0px 0px 0px 0px;
+  }
+
+  header section .cards {
+    top: 38%;
+  }
+
+  header section .social {
+    top: 38%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  header .logo {
+    left: 30%;
+    width: 180px;
+    height: 200px;
+  }
+
+  header .logo img {
+    width: 180px;
+    margin: 0px 0px 0px 0px;
+  }
+
+  header section .content {
+    left: 11%;
+    top: 35%;
+  }
+
+  header section .cards,
+  header section .social {
+    width: 95%;
+    top: 37%;
+  }
+}
+
+@media screen and (max-width: 418px) {
+  header section .content {
+    top: 32%;
+    left: 15%;
+  }
+
+  header section .content h1 {
+    font-size: 20px;
+  }
+
+  header section .content p {
+    font-size: 9px;
+    width: 220px;
+  }
+
+  header .logo {
+    width: 150px;
+    left: 30%;
+  }
+
+  header .logo img {
+    width: 150px;
+    margin: 10px 0px 0px 0px;
+  }
+
+  header section .cards,
+  header section .social {
+    top: 35%;
+    width: 90%;
+  }
+}
